@@ -110,62 +110,6 @@ void loop() {
 
 
   BLEDevice central = BLE.central();
-  /*Serial.println("- Discovering central device...");
-  delay(500);
-
-  if(central) {
-    Serial.println("* Connected to central device!");
-    Serial.print("* Device MAC address: ");
-    Serial.println(central.address());
-    Serial.println(" ");
-
-    TfLiteStatus invokeStatus = tflInterpreter->Invoke();
-    if(invokeStatus != kTfLiteOk) {
-       Serial.println("Invoke failed!");
-       while (1);
-       return;
-    }
-
-      if(rxDewpointSlipperyServiceCharacteristic.written()) {
-        Serial.println(rxDewpointSlipperyServiceCharacteristic.value());
-        dewpoint = rxDewpointSlipperyServiceCharacteristic.value();
-        tflInputTensor->data.f[0] = dewpoint;
-      }
-      if(rxTemperatureSlipperyCharacteristic.written()) {
-        Serial.println(rxTemperatureSlipperyCharacteristic.value());
-        temp = rxTemperatureSlipperyCharacteristic.value();
-        tflInputTensor->data.f[1] = temp;
-      }
-      if(rxSlopeSlipperyServiceCharacteristic.written()) {
-        Serial.println(rxSlopeSlipperyServiceCharacteristic.value());
-        slope = rxSlopeSlipperyServiceCharacteristic.value();
-        tflInputTensor->data.f[2] = slope;
-      }
-
-    inference = tflOutputTensor->data.f[0];
-    Serial.print("Writing value: ");
-    Serial.print(inference);
-    Serial.println(" to inference characteristic...");
-    txInferenceSlipperyServiceCharacteristic.writeValue(inference);
-  }
-  
-  float* pdewpoint;
-  float d = -32.2f;
-  pdewpoint = &d;
-  
-  tflInputTensor->data.f[0] = -32.2;
-  tflInputTensor->data.f[1] = -8.8;
-  tflInputTensor->data.f[2] = -3.66;
-
-  TfLiteStatus invokeStatus = tflInterpreter->Invoke();
-  if(invokeStatus != kTfLiteOk) {
-    Serial.println("Invoke failed!");
-    while (1);
-    return;
-  }
-
-  Serial.println(tflOutputTensor->data.f[0]);
-  */
   delay(1);
 }
 
